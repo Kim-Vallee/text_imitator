@@ -101,7 +101,6 @@ def get_chance_of_first_letter(alphabet, amount_of_word, splitted_txt):
             /amount_of_word)*100 + temp_last])
             temp_last += temp_list.count(alphabet[i])/amount_of_word*100
         i += 1
-    print(chance_of_first_letter)
     chance_of_first_letter[-1][1] = 100
     return chance_of_first_letter
 
