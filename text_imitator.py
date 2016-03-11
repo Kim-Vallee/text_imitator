@@ -14,7 +14,7 @@ longueur_texte = len(texte) # On récupère la longueur du texte
 
 for ltrs in texte: # On transforme tout le texte en liste
     liste_text.append(ltrs)
-
+print(alphabet)
 # On récupère les chances d'avoir une lettre après une autre
 i = 0
 while i < len(alphabet): # On parcours tout l'alphabet

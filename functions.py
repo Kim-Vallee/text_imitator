@@ -2,6 +2,8 @@
 # coding: utf8
 import sys
 import random
+import string
+from datas import *
 """File where all the functions are stocked"""
 def notre_text(answer):
     """ Function testing user's answer"""
@@ -16,9 +18,9 @@ def notre_text(answer):
          paper. Maybe the guy was deeply involved in bizarre barbecue hara-kiri \
          peep-show suicide."
     elif answer.lower() == 'n':
-        print('Veuillez entrer un texte de 1000 charactères ou plus : ')
-        texte1 = str(sys.stdin.read(1000)) # sys.stdin.read()
-                                        # permet de copier tout                                        # un texte.
+        print('On utilise le texte contenu dans le ficher fichier.txt . . .')
+        with open('fichier.txt','r') as fichier:
+            texte1 = fichier.read
     else:
         notre_text(str(input('Veuillez répondre par y/n : ')))
     return str(texte1)
@@ -44,7 +46,7 @@ def get_after_letter(indices, temp_list, liste_text, i):
         # Try / except pour éviter les erreurs de dernier charactère
         try:
         # On stock les lettres suivants la lettre alphabet[i] dans temp_list
-            if (liste_text[indices[i][j] + 1] != ',' and liste_text[indices[i][j] + 1] != '.'):
+            if (liste_text[indices[i][j] + 1] in alphabet):
                 temp_list.append(liste_text[indices[i][j] + 1])
         except IndexError:
             pass

@@ -7,7 +7,7 @@ import random
 
 indices = list()
 liste_text = list()
-alphabet = string.ascii_lowercase + string.whitespace + string.punctuation
+alphabet = string.ascii_lowercase + string.whitespace
 alphabet = alphabet.replace('"','')
 alphabet = alphabet.replace('.','')
 alphabet = alphabet.replace('\n','')
